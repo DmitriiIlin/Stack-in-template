@@ -39,7 +39,7 @@ def operation_logic(first_Stack_Lifo,input_list):
                 second_Stack_Lifo.push(A*B)    
             first_Stack_Lifo.pop()
         elif first_Stack_Lifo.peak() in result_operations:
-            print(second_Stack_Lifo.peak())
+            print(second_Stack_Lifo.peek())
     return second_Stack_Lifo           
 
 Z=[]
@@ -53,4 +53,4 @@ add_element_in_input_list(Z,'+')
 print(Z)
 j=fitst_Stack_init(Z)
 f=operation_logic(j,Z)
-print(f.peak())
+print(f.peek())
