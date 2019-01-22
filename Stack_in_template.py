@@ -11,16 +11,28 @@ class Stack:
 
     def push(self, value):
         if len(self.stack)>0:
+            print("insert")
             return self.stack.insert(0,value)
-        return self.stack.append(value)
+        else:
+            print("append")
+            return self.stack.append(value)
 
     def peek(self):
-        if len(self.stack) == 0:
+        if len(self.stack) <= 0:
             return None
-        return self.stack[-1]
+        else:
+            return self.stack[-1]
 
     def size(self):
         return len(self.stack)
+
+a=Stack()
+a.push(2)
+a.push(23)
+a.push(45)
+print(a.peek())
+#a.pop()
+#print(a.peek())
 
 def check_brackets(S):
     #Функция определяет кол-во символов типа ( или ) и проверяет рав-во кол-ва этих элементов
@@ -81,16 +93,16 @@ def operation_logic(first_Stack_Lifo,input_list):
             print(second_Stack_Lifo.peek())
     return second_Stack_Lifo           
 
-Z=[]
-add_element_in_input_list(Z,8)
-add_element_in_input_list(Z,2)
-add_element_in_input_list(Z,'+')
-add_element_in_input_list(Z,5)
-add_element_in_input_list(Z,'*')
-add_element_in_input_list(Z,9)
-add_element_in_input_list(Z,'+')
-print(Z)
-j=fitst_Stack_init(Z)
-f=operation_logic(j,Z)
-print(f.peek())
+#Z=[]
+#add_element_in_input_list(Z,8)
+#add_element_in_input_list(Z,2)
+#add_element_in_input_list(Z,'+')
+#add_element_in_input_list(Z,5)
+#add_element_in_input_list(Z,'*')
+#add_element_in_input_list(Z,9)
+#add_element_in_input_list(Z,'+')
+#print(Z)
+#j=fitst_Stack_init(Z)
+#f=operation_logic(j,Z)
+#print(f.peek())
 
