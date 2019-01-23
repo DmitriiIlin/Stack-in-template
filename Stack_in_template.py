@@ -11,10 +11,10 @@ class Stack:
 
     def push(self, value):
         if len(self.stack)>0:
-            print("insert")
+            #print("insert")
             return self.stack.insert(0,value)
         else:
-            print("append")
+            #print("append")
             return self.stack.append(value)
 
     def peek(self):
@@ -26,13 +26,6 @@ class Stack:
     def size(self):
         return len(self.stack)
 
-a=Stack()
-a.push(2)
-a.push(23)
-a.push(45)
-print(a.peek())
-#a.pop()
-#print(a.peek())
 
 def check_brackets(S):
     #Функция определяет кол-во символов типа ( или ) и проверяет рав-во кол-ва этих элементов
