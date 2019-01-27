@@ -33,12 +33,17 @@ def check_brackets(S):
     output="True"
     index=0
     a=Stack()
+    if S[0]==')':
+        output="False"
     if string_len % 2 != 0:
         output="False"
     else:
         while index<string_len:
             if S[index]=="(":
                 a.push(S[index])
+                if a.size()>(string_len/2):
+                    output="False"
+                    break
             elif S[index]==")" and a.size()>0:
                 a.pop()
             else:
